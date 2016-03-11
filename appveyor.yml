@@ -10,6 +10,8 @@ environment:
     - visualcpp: C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat
       machine: x86
 init:
+  - echo visualcpp
+  - echo machine
   - call "%visualcpp%" "%machine%"
   - set PATH=%PATH%;C:\cygwin\bin;
 
