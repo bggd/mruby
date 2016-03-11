@@ -4,12 +4,13 @@ clone_depth: 1
 
 environment:
   matrix:
-    - visualcpp: "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat amd"
-      - machine: amd64
-    - visualcpp: "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"
-      - machine: x86
+    - visualcpp: C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat
+      machine: amd64
+
+    - visualcpp: C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat
+      machine: x86
 init:
-  - call visualcpp machine
+  - call %visualcpp% machine
   - set PATH=%PATH%;C:\cygwin\bin;
 
 build_script:
