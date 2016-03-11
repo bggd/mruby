@@ -12,7 +12,7 @@ environment:
 init:
   - echo "%visualcpp%"
   - echo "%machine%"
-  - call "%visualcpp%" "%machine%"
+  - call "%visualcpp% machine%"
   - set PATH=%PATH%;C:\cygwin\bin;
 
 build_script:
