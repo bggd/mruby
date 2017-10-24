@@ -32,4 +32,5 @@ install:
 build_script:
   - set YACC=.\win_flex_bison\win_bison.exe
   - set MRUBY_CONFIG=appveyor_config.rb
-  - ruby .\minirake test
+  - ruby --version
+  - ruby .\minirake test all
